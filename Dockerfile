@@ -28,7 +28,7 @@ RUN umask 0002 && chmod 777 -R assets && \
 RUN sed -i 's/allow_url_fopen.*/allow_url_fopen = Off/ig' /etc/php5/cli/php.ini && \
     sed -i 's/allow_url_fopen.*/allow_url_fopen = Off/ig' /etc/php5/fpm/php.ini
 RUN bin/gpm install -y admin youtube snappygrav toc tidyhtml pages-json shortcodes markdown-color logerrors instagram gravstrap markdown-sections leaflet data-manager breadcrumbs highlight pagination random simplesearch taxonomylist github lightslider relatedpages page-inject optimus read_later metadata_extended external_links mathjax filesource && \
-    echo "Europe/Moscow" > /etc/timezone && dpkg-reconfigure tzdata
+    echo "Europe/Riga" > /etc/timezone && dpkg-reconfigure tzdata
 
 #Configure Nginx - enable gzip
 RUN sed -i 's|# gzip_types|  gzip_types|' /etc/nginx/nginx.conf
